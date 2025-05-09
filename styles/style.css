@@ -50,7 +50,6 @@ fieldset, input {
   grid-template-columns: 711px 399px;
   grid-template-areas: "results details";
   gap: 30px;
-  height: 534px;
   align-items: flex-end;
 }
 
@@ -106,8 +105,8 @@ input[type="text"] {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
-  background-color: #1b1919;
-  border-top: 1px solid #fff;
+  background-color: transparent;
+  border-top: 1px solid currentColor;
   border-bottom: 1px solid #fff;
   appearance: none;
   padding-left: 0;
@@ -161,7 +160,7 @@ input[type="text"]:focus {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   background-color: transparent;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -214,7 +213,7 @@ input[type="text"]:focus {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .content__list {
@@ -228,12 +227,16 @@ input[type="text"]:focus {
   padding-left: 2px;
   text-decoration: none;
   color: #fff;
-  height: 103px;
+  min-height: 103px;
   width: 390px;
 }
 
 .content__video-card {
   display: flex;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -242,7 +245,7 @@ input[type="text"]:focus {
   cursor: pointer;
 }
 
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
